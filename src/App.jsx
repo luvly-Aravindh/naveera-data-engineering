@@ -5,6 +5,8 @@ import PainPoints from './components/PainPoints.jsx'
 import LeadForm from './components/LeadForm.jsx'
 import { VideoSection, Testimonials, Services, Results } from './components/sections1.jsx'
 import { Process, TrustBadges, Comparison, FAQ, FinalCTA, Footer } from './components/sections2.jsx'
+import GenAISection from './components/GenAISection.jsx'
+
 
 export default function App() {
   return (
@@ -15,6 +17,7 @@ export default function App() {
         <Hero />
         <PainPoints />
         <VideoSection />
+         <GenAISection />
         <Testimonials />
         <Services />
         <Results />
