@@ -3,6 +3,7 @@ import Navbar    from './components/Navbar.jsx'
 import Hero      from './components/Hero.jsx'
 import PainPoints from './components/PainPoints.jsx'
 import LeadForm from './components/LeadForm.jsx'
+import FormPopup from './components/FormPopup.jsx'
 import { VideoSection, Testimonials, Services, Results } from './components/sections1.jsx'
 import { Process, TrustBadges, Comparison, FAQ, FinalCTA, Footer } from './components/sections2.jsx'
 import GenAISection from './components/GenAISection.jsx'
@@ -29,6 +30,7 @@ export default function App() {
         <FinalCTA />
       </main>
       <Footer />
+      <FormPopup />
     </div>
   )
 }

@@ -5,7 +5,7 @@ import { CtaBtn, UrgencyRow, SH, Reveal, StaggerReveal, FV } from './shared.jsx'
 import LoadingBar from '../components/LoadingBar.jsx'
 
 const CARDS = [
-  { icon:AlertCircle, color:'#EE6B00', tag:'Unreliable Pipelines', title:'Pipelines Fail When It Matters', body:'Significant time and budget invested, but pipelines still fail when it matters. Teams spend more time fixing than shipping.' },
+  { icon:AlertCircle, color:'#EE6B00', tag:'Unreliable Pipelines', title:'Pipelines Fail When It Matters', body:'Significant time and budget invested, but pipelines still fail when it matters. Teams spend more time fixing than shipping. Our Scalable Data Pipeline Engineering approach is designed to improve reliability as workloads grow.' },
   { icon:Layers,      color:'#010C44', tag:'Vendor Fragmentation', title:'No Single Point of Accountability', body:'Multiple tools and vendors across ingestion, transformation, and warehousing, but no single point of accountability when things break.' },
   { icon:Activity,    color:'#EE6B00', tag:'Data Silos',           title:'Data Spread Across Systems',        body:'Data spread across systems with no consistency. Every new request starts with fixing the foundation instead of delivering insights.' },
   { icon:Package,     color:'#010C44', tag:'Engineering Drain',    title:'Engineers Debugging, Not Building', body:'Your best engineers are tied up debugging pipelines and coordinating fixes instead of building product and driving growth.' },
@@ -61,12 +61,7 @@ export default function PainPoints() {
         </div>
 
         <Reveal className="flex flex-col items-center gap-3">
-          <CtaBtn   onClick={() =>
-    document.getElementById("contact")?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    })
-  } size="lg">
+          <CtaBtn onClick={() => window.openFormPopup?.()} size="lg">
             Show Me What's Slowing Us Down <ArrowRight size={17} />
           </CtaBtn>
           <UrgencyRow text="3 Spots Left · 30-Minute Technical Deep Dive Call" />

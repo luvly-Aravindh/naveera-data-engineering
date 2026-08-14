@@ -163,5 +163,53 @@ if ($action === "verify_otp") {
     respond("success", "Form submitted successfully");
 }
 
+// ================= CONTACT FORM =================
+if (in_array($action, ["submit_contact", "submit_lead", "contact_form", "default_form"], true)) {
+    $name = trim((string)($input['name'] ?? ''));
+    $email = trim((string)($input['email'] ?? ''));
+    $phone = trim((string)($input['phone'] ?? ''));
+    $website = trim((string)($input['website'] ?? ''));
+    $company = trim((string)($input['company'] ?? ''));
+    $source = trim((string)($input['source'] ?? 'website'));
+    $challenge = trim((string)($input['challenge'] ?? ''));
+    $details = trim((string)($input['details'] ?? ''));
+
+    if (!$name || !$email || !$phone || !$website) {
+        respond("error", "Name, email, phone and website are required");
+    }
+
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        respond("error", "Invalid email address");
+    }
+
+    $website = preg_match('/^https?:\/\//i', $website) ? $website : 'https://' . $website;
+    $company = $company ?: parse_url($website, PHP_URL_HOST) ?: 'N/A';
+    $company = str_replace(['www.', 'https://', 'http://'], '', $company);
+
+    $body = "
+    <html>
+    <body style='font-family:Arial;background:#f4f6f8;padding:20px'>
+        <div style='background:#fff;padding:20px;border-radius:10px'>
+            <h2>New Lead Received</h2>
+            <p><strong>Source:</strong> " . htmlspecialchars($source) . "</p>
+            <p><strong>Name:</strong> " . htmlspecialchars($name) . "</p>
+            <p><strong>Email:</strong> " . htmlspecialchars($email) . "</p>
+            <p><strong>Phone:</strong> " . htmlspecialchars($phone) . "</p>
+            <p><strong>Company:</strong> " . htmlspecialchars($company) . "</p>
+            <p><strong>Website:</strong> " . htmlspecialchars($website) . "</p>
+            <p><strong>Challenge:</strong> " . htmlspecialchars($challenge ?: 'Not provided') . "</p>
+            <p><strong>Details:</strong> " . htmlspecialchars($details ?: 'Not provided') . "</p>
+        </div>
+    </body>
+    </html>
+    ";
+
+    $subject = "Naveera Contact Form Lead - " . htmlspecialchars($source);
+    safeMail("sriethiraj@getnos.io", $subject, $body);
+    safeMail("hello@getnos.io", $subject, $body);
+
+    respond("success", "Form submitted successfully");
+}
+
 // ================= DEFAULT =================
 respond("error", "Invalid request");

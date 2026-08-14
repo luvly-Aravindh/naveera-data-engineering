@@ -33,12 +33,7 @@ export function VideoSection() {
                 accent="Is Another Quarter Your Roadmap Burns Dollars."
                 sub="The companies that will have a reliable data platform at their next funding round are the ones that fixed their pipelines 90 days ago. The companies still stuck in vendor negotiations will still be stuck. Don't be the second group." />
             <div className="flex justify-center mt-7 gap-3 flex-wrap">
-              <CtaBtn   onClick={() =>
-    document.getElementById("contact")?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    })
-  } size="lg"><span>Book My Tech Strategy Call</span> <ArrowRight size={17} /></CtaBtn>
+              <CtaBtn onClick={() => window.openFormPopup?.()} size="lg"><span>Book My Tech Strategy Call</span> <ArrowRight size={17} /></CtaBtn>
             </div>
             <motion.div
   initial={{ opacity: 0, y: 20 }}
@@ -213,12 +208,7 @@ export function Testimonials() {
           </div>
 
           <Reveal delay={0.1} className="flex flex-col items-center gap-3 mt-10">
-            <CtaBtn   onClick={() =>
-    document.getElementById("contact")?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    })
-  } size="lg">Join 500+ Tech Leaders Already Winning <ArrowRight size={17} /></CtaBtn>
+            <CtaBtn onClick={() => window.openFormPopup?.()} size="lg">Join 500+ Tech Leaders Already Winning <ArrowRight size={17} /></CtaBtn>
           </Reveal>
 
           <motion.div
@@ -242,11 +232,11 @@ export function Testimonials() {
 ═══════════════════════════════════════════════════════════ */
 const SERVICES = [
   { icon:Database,  title:'Data Pipeline Architecture', body:'Robust pipeline design and implementation using Airflow, dbt, Spark, and Kafka, built for reliability and scale in production.',                       tag:'Core Infra'  },
-  { icon:Bot,       title:'Data Warehouse Systems',     body:'Warehouse architecture across Snowflake, BigQuery, and Redshift, optimized for performance, cost, and analytics readiness.',                          tag:'Warehouse'   },
-  { icon:Cpu,       title:'Legacy System Migration',    body:'End-to-end migration from legacy systems to modern data stacks, without disrupting business operations.',                                            tag:'Migration'   },
-  { icon:Zap,       title:'Observability & Lineage',    body:'Data quality frameworks with lineage tracking and observability tooling, ensuring trust, traceability, and reliability across the stack.',           tag:'Quality'     },
-  { icon:BarChart3, title:'Decision-Ready Infrastructure', body:'Analytics systems built for finance and leadership teams accurate, consistent, and ready for board-level reporting.',                              tag:'Analytics'   },
-  { icon:Activity,  title:'ETL/ELT Rebuilds',           body:'Re-architecting pipelines that fail at scale into efficient, production-ready ETL/ELT systems with full lineage and observability.',                  tag:'Pipelines'   },
+  { icon:Bot,       title:'Data Warehouse Systems',     body:'Warehouse architecture across Snowflake, BigQuery, and Redshift, optimized for performance, cost, and analytics readiness. This includes Modern Data Warehousing and Lakehouse patterns where appropriate.',                          tag:'Warehouse'   },
+  { icon:Cpu,       title:'Legacy System Migration',    body:'End-to-end migration from legacy systems to modern data stacks, This work is supported by Data Platform Modernization practices and structured migration roadmaps.',                                            tag:'Migration'   },
+  { icon:Zap,       title:'Observability & Lineage',    body:'Data quality frameworks with lineage tracking and observability tooling, ensuring trust, traceability, and  Enterprise Data Governance and Quality is embedded into the engineering approach rather than treated as an afterthought.',           tag:'Quality'     },
+  { icon:BarChart3, title:'Decision-Ready Infrastructure', body:'Analytics systems built for finance and leadership teams accurate, consistent, and ready for board-level reporting. This can support Business Intelligence and Enterprise Reporting across operational and strategic use cases.',                              tag:'Analytics'   },
+  { icon:Activity,  title:'ETL/ELT Rebuilds',           body:'Re-architecting pipelines that fail at scale into efficient, production-ready ETL/ELT API, ETL, and ELT Integration helps connect fragmented systems into a more consistent data environment.',                  tag:'Pipelines'   },
 ]
 
 function SvcCard({ s, i }) {
@@ -298,12 +288,7 @@ export function Services() {
             {SERVICES.map((s,i)=><SvcCard key={i} s={s} i={i} />)}
           </div>
           <Reveal className="flex flex-col items-center gap-3">
-            <CtaBtn   onClick={() =>
-    document.getElementById("contact")?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    })
-  } size="lg">See How This Would Work for Your Stack <ArrowRight size={17} /></CtaBtn>
+            <CtaBtn onClick={() => window.openFormPopup?.()} size="lg">See How This Would Work for Your Stack <ArrowRight size={17} /></CtaBtn>
         <UrgencyRow text="High-priority teams are scoping their data infrastructure rebuild" />
 
           </Reveal>

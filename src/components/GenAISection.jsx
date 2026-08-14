@@ -5,22 +5,22 @@ const features = [
   {
     icon: Brain,
     title: "Strategic Data Planning",
-    desc: "Our consultants work with you to define a clear data strategy, choosing the right architecture, tools, and pipeline design to solve your specific challenges and support your business goals.",
+    desc: "Our consultants work with you to define a clear data strategy, choosing the right architecture, tools, and pipeline design to solve your specific challenges and support your business goals. This includes Data Strategy, Architecture, and Roadmapping to establish priorities and a practical path from current-state systems to the target data environment.",
   },
   {
     icon: Lightbulb,
     title: "Modern Data Platforms",
-    desc: "We help you replace fragmented, unreliable systems with stable, scalable data platforms. Our teams evaluate your data environment and implement solutions across ingestion, transformation, and reporting.",
+    desc: "We help you replace fragmented, unreliable systems with stable, scalable data platforms. Our teams evaluate your data environment and implement solutions across ingestion, transformation, and reporting. This can include Data Platform Modernization, Modern Data Warehousing and Lakehouse architecture, and Enterprise Data Lake Engineering.",
   },
   {
     icon: ShieldCheck,
     title: "High-Availability Data Systems",
-    desc: "We keep your data systems reliable and available, reducing downtime and ensuring consistent performance as your data grows.",
+    desc: "We keep your data systems reliable and available, reducing downtime and ensuring consistent performance as your data grows. Our Scalable Data Pipeline Engineering practices support resilient batch and streaming workloads.",
   },
   {
     icon: Layers,
     title: "Delivery Built Around Your Needs",
-    desc: "Whether you need to fix pipelines, build a data warehouse, or modernize your platform, our delivery models are tailored to your needs using proven tools and frameworks.",
+    desc: "Whether you need to fix pipelines, build a data warehouse, or modernize your platform, our delivery models are tailored to your needs using proven tools and frameworks. Big Data Engineering Services, API, ETL, and ELT Integration, and Data Engineering as a Service (DEaaS).",
   },
 ];
 
@@ -114,12 +114,7 @@ export default function GenAISection() {
             className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center"
           >
             <button
-              onClick={() =>
-                document.getElementById("contact")?.scrollIntoView({
-                  behavior: "smooth",
-                  block: "start",
-                })
-              }
+              onClick={() => window.openFormPopup?.()}
               className="inline-flex items-center btn btn-primary btn-primary-lg px-10 py-4 w-full sm:w-auto justify-center"
             >
               Book Your Tech Strategy Call

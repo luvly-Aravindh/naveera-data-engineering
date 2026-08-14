@@ -223,7 +223,8 @@ export default function Hero() {
     >
       With Naveera, turn fragmented, unreliable data infrastructure into a
       stable, scalable foundation that supports real production workloads,
-      without dragging through another 12–18 month rebuild cycle.
+      without dragging through another 12-18 month rebuild cycle.Our Data Engineering Consulting Services help US tech teams create a reliable foundation for growth, modernization, and AI adoption.
+
     </motion.p>
 
     {/* Buttons */}
@@ -234,12 +235,7 @@ export default function Hero() {
       className="mb-8 flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:items-center"
     >
       <CtaBtn
-        onClick={() =>
-          document.getElementById("contact")?.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          })
-        }
+        onClick={() => window.openFormPopup?.()}
         size="lg"
         className="w-full justify-center sm:w-auto"
       >

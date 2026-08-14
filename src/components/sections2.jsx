@@ -72,12 +72,7 @@ export function Process() {
         </div>
 
         <Reveal delay={0.1} className="flex flex-col items-center gap-3 mt-14">
-          <CtaBtn   onClick={() =>
-    document.getElementById("contact")?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    })
-  } size="lg">See How This Fits Your Stack <ArrowRight size={17} /></CtaBtn>
+          <CtaBtn onClick={() => window.openFormPopup?.()} size="lg">See How This Fits Your Stack <ArrowRight size={17} /></CtaBtn>
         </Reveal>
 
         <motion.div
@@ -314,12 +309,7 @@ export function Comparison() {
           High-priority teams are already moving from broken pipelines to production-stable infrastructure. This week's slots are almost full.
         </p>
 
-        <button   onClick={() =>
-    document.getElementById("contact")?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    })
-  } className="mt-8 px-8 py-4 rounded-2xl font-semibold text-white btn-primary transition-all duration-300 hover:scale-105">
+        <button onClick={() => window.openFormPopup?.()} className="mt-8 px-8 py-4 rounded-2xl font-semibold text-white btn-primary transition-all duration-300 hover:scale-105">
           Book Strategy Call
         </button>
 
@@ -451,18 +441,8 @@ export function FinalCTA() {
             <p className="t-lead text-white/55 mb-9 max-w-xl">
               Stable pipelines in your next board meeting are more valuable than another 12-month rebuild plan. We help you fix what is breaking now, then scale from there. No more vendor handoffs. No more 18-month migrations.
             </p>
-            <div   onClick={() =>
-    document.getElementById("contact")?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    })
-  } className="flex flex-col items-start gap-3 mb-10">
-              <CtaBtn   onClick={() =>
-    document.getElementById("contact")?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    })
-  } size="lg">Book My Tech Strategy Call <ArrowRight size={17} /></CtaBtn>
+            <div className="flex flex-col items-start gap-3 mb-10">
+              <CtaBtn onClick={() => window.openFormPopup?.()} size="lg">Book My Tech Strategy Call <ArrowRight size={17} /></CtaBtn>
               <UrgencyRow text="Limited consultation slots available this month" />
               <motion.div
   initial={{ opacity: 0, y: 20 }}
